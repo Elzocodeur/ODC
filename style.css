@@ -1,0 +1,296 @@
+/* Styles des cases à cocher */
+.case-cochee .case {
+    appearance: none;
+    background-color: #dfe1e4;
+    border-radius: 70px;
+    border-style: none;
+    flex-shrink: 0;
+    height: 34px; 
+    margin: 0;
+    position: relative;
+    width: 60px; 
+}   
+
+.case-cochee .case::before {
+    bottom: -6px;
+    content: "";
+    left: -6px;
+    position: absolute;
+    right: -6px;
+    top: -6px;
+}
+
+.case-cochee .case,
+.case-cochee .case::after {
+    transition: all 100ms ease-out;
+}
+
+.case-cochee .case::after {
+    background-color: #000000;
+    border-radius: 50%;
+    content: "";
+    height: 31px;
+    left: 1px; 
+    position: absolute;
+    top: 1px; 
+    width: 30px; 
+}
+
+.case-cochee input[type=checkbox] {
+    cursor: default;
+}
+
+.case-cochee .case:hover {
+    background-color: #fefeff;
+    transition-duration: 0s;
+}
+
+.case-cochee .case:checked {
+    background-color: #fafafa;
+}
+
+.case-cochee .case:checked::after {
+    background-color: #fff7f7;
+    left: 29px; 
+}
+
+.case-cochee :focus:not(.focus-visible) {
+    outline: 0;
+}
+
+.case-cochee .case:checked:hover {
+    background-color: #151516;
+}
+
+/* Styles généraux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #4e4747; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+}
+
+.conteneur {
+    width: 80vw;
+    height: 85vh;
+    margin-top: 100px;
+    background-color: #393737;
+    border-radius: 1.5em;
+    display: flex;
+    flex-direction: row;  
+    /* box-shadow:  1px 1px 15px 1px  rgba(221, 221, 228, 1);  */
+}
+
+.boite-1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.tableau-de-bord {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.tableau-de-bord-1 {
+    margin-top: 2em;
+    padding: 1em;
+    background-color: rgb(137, 137, 137);
+    border-radius: 0.4em; 
+}
+
+.tableau-de-bord-2 {
+    margin: 2em 0 2em 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.tableau-de-bord-2 > .element {
+    border-radius: 1em;
+    background-color: #c7bfbf;
+    color: white;
+    padding: 1%;
+    margin: 3%;
+    width: 44%;
+}
+/* Effet pour les cage */
+
+/* .tableau-de-bord-2 > .element:hover {
+    filter: drop-shadow(0 0 5px  rgb(146, 146, 146)); 
+} */
+
+.tableau-de-bord-3 {
+    padding: 1em;
+    border: 0.13em solid rgb(238, 72, 85);
+    border-radius: 15em;
+    background-color: aliceblue;
+    font-weight: bold;
+}
+
+.element .contenu {
+    display: flex;
+    margin: 0 0.5em;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 2em;
+}
+
+.element .contenu .contenu-1 {
+    padding: 0.5em;
+    border-radius: 40%;
+    color: white;
+    font-size: 1.5em;
+}
+
+.texte {
+    font-weight: bold;
+    margin: 0 0.9em;
+}
+
+.element-1 .contenu-1 {
+    background-color: rgb(31, 235, 235);
+}
+
+.element-2 .contenu-1 {
+    background-color: rgb(19, 206, 115);
+}
+
+.element-3 .contenu-1 {
+    background-color: rgb(255, 187, 0);
+}
+
+.tableau-de-bord-2 .element-4 {
+    background-color: rgb(255, 0, 0);
+}
+
+/* DEUXIEME PARTIE */
+
+.boite-2 {
+    flex: 3;
+    background-color: rgba(8, 7, 7, 0.3);
+    border-radius: 0 1.5em 1.3em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.boite-2 .boite {
+    border-radius: 1em;
+    margin: 2px;
+    color: white;
+}
+
+.boite-2 .boite-1 {
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: bold;
+    padding-left: 15px;
+}
+
+.boite-2 .boite-1 .contenu-1 {
+    font-size: 2.5em;
+    border-radius: 1em;
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5em  1em 0  0 ;
+}
+
+.boite-2 .boite-2 {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+    font-weight: bold;
+    background-color: #636161 ;
+    padding-left: 14em;
+    align-items: center;
+    padding-right: 15px;
+}
+
+.boite-2 .boite-3 {
+    flex: 20;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.jour{
+    flex-grow: 1;
+    margin-bottom: 2px;
+    /* font-weight: bold;
+    font-size: 20px; */
+    display: flex;
+}
+
+.jour .formulaire{
+    flex:1;
+    border: 
+    1px solid rgb(93, 91, 91);
+    border-radius: 10px 0 0 10px;
+    padding-top: 4.5%;
+    padding-left: 1%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.jour .champ{
+    flex:4.5;
+    background-color: #5a6a6d;
+    border-radius: 0 10px 10px 0;
+}
+
+.jour .formulaire button{
+    height: 40%;
+    margin-right: 20px;
+    color: rgb(83, 215, 94);
+    background-color: inherit;
+}
+
+@media (max-width: 768px) {
+    /* Styles responsives ici */
+    body {
+        font-size: 14px;
+    }
+    
+    .conteneur {
+        flex-direction: column;
+        height: auto;
+        margin-top: 50px;
+    }
+
+    .boite-1, .boite-2 {
+        flex: auto;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .tableau-de-bord-2 > .element {
+        width: 100%;
+    }
+
+    .tableau-de-bord-2 {
+        flex-direction: column;
+    }
+
+    .jour .formulaire {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .jour .champ {
+        border-radius: 0 0 10px 10px;
+    }
+}
