@@ -1,0 +1,21 @@
+#ifndef dessin1
+#define dessin1
+        // Déclaration des fonctions fictives de la bibliothèque graphique
+        void drawTriangle(int size, const char *color);
+        void drawSquare(int size, const char *color);
+        void setColor(const char *color);
+        void blinkShape(int size, const char *color);
+
+#endif
+// Implémentations fictives des fonctions de la bibliothèque graphique
+void drawRightAngledTriangle(int size)
+{
+    for (int i = 1; i <= size; ++i)
+    {
+        for (int j = 1; j <= i; ++j)
+        {
+            printf("* ");
+        }
+        printf("\n");
+    }
+}

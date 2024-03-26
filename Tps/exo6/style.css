@@ -1,0 +1,53 @@
+.container {
+  position: relative;
+  width: 450px; /* Largeur du carré */
+  height: 500px; /* Hauteur du carré */
+  margin: 50px auto; /* Centre le conteneur */
+}
+.circle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.circle.top-left {
+  top: -25px;
+  right: 75px;
+}
+.circle.top {
+  top: -25px;
+  right: 35px;
+}
+
+.circle.top-right {
+  top: -25px;
+  right: 0px;
+}
+
+.circle.bottom-left {
+  bottom: -25px;
+  left: 30px;
+}
+
+.circle.bottom-center {
+  bottom: -25px;
+  left: 30%;
+  transform: translateX(-50%);
+}
+
+.circle.bottom-right {
+  bottom: -25px;
+  left: 70px;
+}
+
+.square {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 480px; /* Largeur du carré */
+  height: 500px; /* Hauteur du carré */
+  background-color: #ccc;
+  border-radius: 250px 0px 250px 0px;
+}

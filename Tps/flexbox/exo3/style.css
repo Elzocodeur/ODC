@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    margin-top: 10px;
+    margin-left: 400px;
+    width: 50%;
+    border: 1px solid black;
+  }
+  
+  .containe {
+    display: flex;
+    flex-direction: column;
+    height: 680px;
+    padding: 10px;
+  }
+  
+  .header, .nav, .footer {
+    width: 100%;
+    border: 1px solid black;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 5px 0;
+    text-align: center;
+  }
+  
+  nav {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: #242020;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    background-color: #555;
+    color: #fff;
+  }
+  
+  .header {
+    height: 5rem;
+    background: orange;
+  }
+  
+  .nav {
+    height: 2rem;
+    background-color: blue;
+  }
+  
+  .row {
+    display: flex;
+    border-bottom: 1px solid black;
+  }
+  
+  .square-red, .square-gray, .square-purple, .square-green {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .square-red {
+    background-color: red;
+  }
+  
+  .square-gray {
+    background-color: gray;
+  }
+  
+  .square-purple {
+    background-color: mediumorchid;
+    height: 300px;
+  }
+  
+  .square-green {
+    background-color: green;
+  }
+  
+  .carre, .carreG, .carregray {
+    width: 200px;
+    height: 120px;
+    background-color: gray;
+    margin: 10px;
+    border: 1px solid black;
+  }
+  
+  .carreG{
+      width: 200px;
+      height: 120px;
+      background-color: gray;
+      margin-top: -150px;
+      border: 1px solid black;
+  }
+  
+  .footer { 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      /* Hauteur du footer */
+      background-color: orange; /
+  }
+  
+  .carregray {
+      width: 200px;
+      height: 120px;
+      background-color: gray;
+      margin: 20px;
+      border: 1px solid black;
+  }
+  

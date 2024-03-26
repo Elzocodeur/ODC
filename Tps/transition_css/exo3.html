@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo3</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            position: relative;
+            top: 40vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            border: 3px solid gray;
+            height: 8vh;
+            width: 30vw;
+            overflow: hidden;
+            rotate: 180deg;
+        }
+        .text{
+            position: absolute;
+            rotate: 180deg;
+            font-weight: bold;
+            font-size: 25px;
+        }
+        .top{
+            position: absolute;
+            visibility: hidden;
+            height: 100%;
+            right: 47%;
+            width: 1%;
+            transition: transform 5s ease-in;
+            background-color: rgb(39, 207, 39);
+        }
+        .haut{
+            position: absolute;
+            visibility: hidden;
+            top: 45%;
+            height: 6%;
+            width: 100%;
+            background-color: rgb(39, 207, 39);
+            transition: transform 5s ease-in;
+        }
+
+        .container:hover{
+            .top{
+                transform: scaleX(35);
+                visibility: visible;
+                transition: transform 2s ease;
+            }
+            .haut{
+                transform: scaleY(10);
+                visibility: visible;
+                transition: transform 2s ease;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top"></div>
+        <div class="haut"></div>
+        <div class="text">Pharmacie</div>
+    </div>
+</body>
+</html>

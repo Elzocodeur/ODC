@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .my-div {
+        width: 200px;
+        height: 20%;
+        background-color: black;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .my-div:nth-child(2) {
+        background-color: red;
+    }
+    .my-div div {
+        width: 50%;
+        height: 50%;
+        background-color: red;
+        border: 70px solid green;
+    }
+    </style>
+</head>
+<body>
+    <div class="my-div"></div>
+    <div class="my-div">
+    <div></div>
+    </div>
+</body>
+</html>

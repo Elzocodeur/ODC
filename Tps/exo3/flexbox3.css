@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+.container {
+  margin-top: 10px;
+  margin-left: 400px;
+  width: 40%;
+  height: 700px;    
+
+  border: 1px solid black;
+}
+
+.header {
+  width: 100%;
+  height: 5%;
+  border: 1px solid green;
+  background: orange;
+}
+.nav {
+  width: 100%;
+  height: 2%;
+  border: 1px solid green;
+  background-color: blue;
+}
+.contain{
+    height: 85vh;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1em;
+
+  }
+
+.blockRed {
+  width: 48.9%;
+  height: 30%;
+  background-color: red;
+  border: 2px solid black;
+
+
+}
+.carreBlockOne {
+    width: 80%;
+    height: 35%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.2em;
+    margin-left: 2em;
+
+
+}
+.carre{
+  width: 40%;
+  background-color: gray;
+  justify-content: space-between;
+  border: 2px solid black;
+
+}
+
+.carreBlockTwon {
+  width: 80%;
+  height: 35%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3.8em;
+  margin-left: 1em;
+  
+
+
+}
+
+
+.carre1{
+  width: 40%;
+  height: 9vh;
+  background-color: gray;
+  justify-content: space-between;
+  border: 2px solid black;
+  
+}
+
+
+.blockRed .carreBlockTwon {
+  width: 80%;
+  height: 23%;
+  display: flex;
+  justify-content: space-around;
+
+   
+  }
+ 
+
+.blockGray {
+  width: 49.9%;
+  height: 30%;
+  background-color: gray;
+  border: 2px solid black;
+
+}
+
+.carre2{
+  width: 35%;
+  height:35% ;
+  background-color: gray;
+  border: 2px solid black;
+  margin: 50px;
+  margin-top: 2px;
+}
+
+
+
+
+
+
+
+.blockmauve {
+  width: 48.9%;
+  height: 30%;
+  background-color: mediumorchid;
+  border: 2px solid black;
+
+
+}
+
+.carre3 {
+  width: 40%;
+  background-color: gray;
+  justify-content: space-between;
+  border: 2px solid black;
+
+}
+
+ 
+
+.blockGreen {
+  width: 49.9%;
+  height: 30%;
+  background-color: green;
+  border: 2px solid black;
+
+}
+
+.carre4{
+  width: 35%;
+  height:35% ;
+  background-color: gray;
+  border: 2px solid black;
+  margin: 50px;
+  margin-top: 2px;
+}
+
+
+
+
+
+
+
+
+
+.footer {
+  width: 100%;
+  height: 3rem;
+  border: 2px solid green;
+  background-color: #ffa500;
+  margin-top: -100px;
+
+}

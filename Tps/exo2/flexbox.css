@@ -1,0 +1,78 @@
+
+.container {
+    margin-top: 10px;
+    margin-left: 400px;
+      width: 50%;
+      height: 700px;
+      border: 1px solid black;
+    }
+    *{
+      margin: 0;
+      padding: 0;
+    }
+  
+    .containe{
+      height: 480px;
+      background-color: green;
+      margin-top: 30px;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 1px
+
+
+    }
+  
+    .header {
+      width: 100%;
+      height: 5rem;
+      border: 1px solid green;
+      background: orange;
+    }
+    .nav {
+      width: 100%;
+      height: 2rem;
+      border: 1px solid green;
+      background-color: blue;
+    }
+    .carreOne{
+        width: 49.3%;
+        height: 50%;
+        background-color: red;
+        margin-left: 2px ;
+    
+      }
+      .carreTwon{
+        height: 50%;
+        width: 49.3%;
+        background-color: gray;
+        border: 2px solid green;
+        padding-left: 5px;
+
+      }
+      .carreTree{
+        width: 49.3%;
+        height: 50%;
+        background-color: blueviolet;
+        margin-right: 2px;
+    
+      }
+      .D{
+        position: absolute;
+        top: 400px;
+        left: 880px;
+      }
+      
+    .footer {
+        width: 9 rem;
+        height: 3rem;
+        border: 2px solid green;
+        background-color: #ffa500;
+        position: relative;
+      top: 0px;
+    
+      
+      }

@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #2f2e2e; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+    .container {
+    width: 80vw;
+    height: 85vh;
+    margin-top: 100px;
+    background-color: #393737;
+    border-radius: 1.5em;
+    display: flex;
+    flex-direction: row;  
+    box-shadow:  1px 1px 15px 1px  rgba(221, 221, 228, 1); /* Ajout de l'ombre sur tous les côtés */
+    }
+  
+  .box-1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dashboard {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  .dashbord-1 {
+    margin-top: 2em;
+    padding: 1em;
+    background-color: rgb(137, 137, 137);
+    border-radius: 0.4em; 
+  }
+  
+  .dashbord-2 {
+    margin: 2em 0 2em 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .dashbord-2 > .item {
+    border-radius: 1em;
+    background-color: #302f2f;
+    color: white;
+    padding: 1%;
+    margin: 3%;
+    width: 44%;
+  }
+  
+  .dashbord-2 > .item:hover {
+    filter: drop-shadow(0 0 5px  rgb(146, 146, 146)); /* Ajout de l'ombre sur tous les côtés */
+  }
+  
+  .dashbord-3 {
+    padding: 1em;
+    border: 0.13em solid rgb(238, 72, 85);
+    border-radius: 15em;
+    background-color: aliceblue;
+    font-weight: bold;
+  }
+  
+  .item .element {
+    display: flex;
+    margin: 0 0.5em;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 2em;
+  }
+  
+  .item .element .element-1 {
+    padding: 0.5em;
+    border-radius: 40%;
+    color: white;
+    font-size: 1.5em;
+  }
+  
+  .txt {
+    font-weight: bold;
+    margin: 0 0.9em;
+  }
+  .item-1 .element-1 {
+    background-color: aqua;
+  }
+  
+  .item-2 .element-1 {
+    background-color: rgb(0, 255, 136);
+  }
+  
+  .item-3 .element-1 {
+    background-color: rgb(255, 187, 0);
+  }
+  
+  .dashbord-2 .item-4 {
+    background-color: rgb(255, 0, 0);
+  }
+  
+  /* DEUXIEME PARTIE */
+  
+  .box-2 {
+    flex: 3;
+    background-color: rgba(8, 7, 7, 0.3);
+    border-radius: 0 1.5em 1.3em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .box-2 .box {
+    border-radius: 1em;
+    margin: 2px;
+    color: white;
+  }
+  
+  .box-2 .box-1 {
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: bold;
+    padding-left: 15px;
+  }
+  
+  .box-2 .box-1 .element-1 {
+    font-size: 2.5em;
+    border-radius: 1em;
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5em  1em 0  0 ;
+  }
+  
+  .box-2 .box-2 {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+    font-weight: bold;
+    background-color: #636161 ;
+    padding-left: 12em;
+    align-items: center;
+    padding-right: 15px;
+  }
+  
+  .box-2 .box-3 {
+    flex: 20;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .day{
+    flex-grow: 1;
+    margin-bottom: 2px;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+  }
+  
+  .day .form{
+    flex:1;
+    border: 1px solid rgb(93, 91, 91);
+    border-radius: 10px 0 0 10px;
+    padding-top: 4.5%;
+    padding-left: 1%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .day .champ{
+    flex:4.5;
+    background-color:  gray;
+    border-radius: 0 10px 10px 0;
+  }
+  
+  .day .form button{
+  height: 40%;
+  margin-right: 20px;
+  color: rgb(83, 215, 94);
+  background-color: inherit;
+  }

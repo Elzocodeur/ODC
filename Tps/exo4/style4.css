@@ -1,0 +1,50 @@
+.container {
+    width: 80%;
+    height: 70%;
+    margin: auto;
+    border: 1px solid black;
+}
+.header {
+    width: 100%;
+    height: 5rem;
+    border: 1px solid green;
+    background: orange;
+}
+h4 {
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 16px;
+    font-family: shadows into light, 'Times New Roman', Times, serif;
+}
+.containe{
+    width: 100%;
+    position: relative;
+    height: 100vh;
+    border: 2px solid black;
+    overflow: hidden;
+    display: flex;
+}
+.G{
+    width: 10%;
+    height: 100%;
+    background-color: rgb(250, 12, 167);
+}
+.barre1{
+    width: 10%;
+    height: 100%;
+    background-color: rgb(44, 36, 192);
+}
+.barre2{
+    width: 10%;
+    height: 100%;
+    background-color: rgb(250, 12, 167);
+}
+.barre3{
+    width: 10%;
+    height: 100%;
+    background-color: rgb(250, 12, 167);
+}
+.barre4{
+    width: 10%;
+    height: 100%;
+    background-color: rgb(250, 12, 167);

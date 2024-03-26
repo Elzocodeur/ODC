@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulaire de Contact</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        font-weight: bold;
+        color: #333;
+    }
+
+    input[type="text"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    button {
+        background-color: #ff69b4;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: progress;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Contactez-nous</h1>
+    <p>Si vous avez des questions ou des problèmes d'amour, n'hésitez pas à nous envoyer un message.</p>
+    
+    <form>
+        <input type="text" placeholder="Votre nom">
+        <input type="text" placeholder="Votre e-mail">
+        
+        <select>
+            <option value="">Quel est le sujet de votre message ?</option>
+            <!-- Ajoutez ici les options du menu déroulant -->
+        </select>
+        
+        <textarea placeholder="Bonjour, je vous contacte car..."></textarea>
+        
+        <button type="submit">Envoyer mon message</button>
+    </form>
+</div>
+
+</body>
+</html>

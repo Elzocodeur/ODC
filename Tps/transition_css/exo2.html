@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo2</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            position: relative;
+            top: 40vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            position: relative;
+            border: 3px solid gray;
+            height: 6vh;
+            width: 50vw;
+            overflow: hidden;
+            rotate: 180deg;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-items: center;
+        }
+        h1{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            rotate: 180deg;
+            z-index: 1;
+
+        }
+        .gauche{
+            position: absolute;
+            left: -0%;
+            top: -0%;
+            rotate: 90deg;
+            height: 100%;
+            width: 60%;
+            transform-origin: top left;
+            transition: transform 1s;
+            background-color: red;
+        }
+        .droite{
+            position: absolute;
+            right: 0;
+            top: 0;
+            transform-origin: top right;
+            rotate: -90deg;
+            height: 100%;
+            width: 60%;
+            background-color: red;
+            transition: transform 1s;
+        }
+
+        .container:hover{
+            .gauche{
+                transform: rotate(-90deg);
+            }
+            .droite{
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hoverable</h1>
+        <div class="gauche"></div>
+        <div class="droite"></div>
+    </div>
+</body>
+</html>

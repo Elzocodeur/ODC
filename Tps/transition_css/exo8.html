@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo8</title>
+    <style>
+        body{
+            position: relative;
+            top: 40vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            background-color: black;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            border: 4px solid red;
+            background-color: transparent;
+            height: 17vh;
+            width: 30vw;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .container span{
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            font-weight: bold;
+            color: red;
+            font-size: 30px;
+            z-index: -1;
+        }
+        .rond {
+            position: absolute;
+            width: 100%;
+            height: 200%;
+            border-bottom-left-radius: 55px;
+            border-bottom-right-radius: 55px;
+            background-color: red;
+            transform: translateY(-85%);
+            transition: transform 0.2s ease-in;
+            box-sizing: border-box;
+        }
+        .container:hover{
+            .rond{
+                transform: translateY(1%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span>Hoverable</span>
+        <div class="rond" style="position:
+            absolute;font-weight: bold;font-size: 30px;
+            ">
+            <span style="color: black;">Hoverable</span>
+        </div>
+    </div>
+</body>
+</html>

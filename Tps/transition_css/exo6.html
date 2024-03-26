@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exo5</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: 30vh;
+            background-color: rgb(47, 42, 42);
+
+        }
+        .border-white{
+            width: 500px;
+            height: 100px;
+            border: 10px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+
+        }
+        .border-white .hoverable-black{
+
+            width: 475px;
+            height: 80px;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            left: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 30px;
+            font-weight: bolder;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+            
+        }
+
+        .border-white .hoverable-green{
+            width: 0;
+            height: 0;
+            background-color: green;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 30px;
+            font-weight: bolder;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            visibility: hidden;
+            transition: width 1s, height 1s;
+
+        }
+
+        .border-white:hover .hoverable-black{
+            transition: width 1s, height 1s;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+        
+
+        }
+        .border-white:hover .hoverable-green{
+            visibility: visible;
+            width: 480px;
+            height: 80px;
+         
+        }
+
+      
+
+    
+    </style>
+</head>
+<body>
+    <div class="border-white">
+        <div class="hoverable-black">Hoverable</div>
+        <div class="hoverable-green">Hoverable</div>
+    </div>
+    
+</body>
+</html>

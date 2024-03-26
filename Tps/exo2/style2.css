@@ -1,0 +1,85 @@
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-top: 10px;
+    width: 900px;
+    height: 800px;
+    border: 1px solid black;
+    margin-left: 400px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+  }
+  .header {
+    width: 100%;
+    height: 10%;
+    border: 1px solid green;
+    background: orange;
+  }
+  .nav {
+    width: 100%;
+    height: 5%;
+    border: 1px solid green;
+    background-color: blue;
+  }
+
+  .containe{
+    height: 75%;
+    width: 98%;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    margin-left: 10px;
+
+  
+    
+    
+  }
+
+
+  .blockOne{
+    width: 49%;
+    height: 50%;
+    background-color: red;
+    border: 4px solid green;
+    
+
+  }
+  .blockTwon{
+    width: 49%;
+    height: 50%;
+    background-color: blue;
+    border: 4px solid green;
+
+
+  }
+  .blockTree{
+    width: 49%;
+    height: 50%;
+    background-color: rgb(255, 0, 204);
+    border: 4px solid green;
+
+
+  }
+  .blockFaur{
+    width: 49%;
+    height: 50%;
+    background-color: green;
+    border: 4px solid green;
+
+  
+  }
+  
+.footer {
+  
+  height: 5%;
+  border: 1px solid green;
+  background-color: orange;
+  margin-top: 1.9rem;
+
+}
+

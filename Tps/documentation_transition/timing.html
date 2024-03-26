@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timing</title>
+    <style>
+                    div{
+                width: 30%;
+                height: 60px;
+                margin: 20px auto;
+                border: 2px solid black;
+                box-sizing: border-box;
+                text-align: center;
+                padding: 15px;
+            }
+
+            .d1, .d2, .d3, .d4, .d5, .d6{
+                background-color: orange;
+                transition-property: width;
+                transition-duration: 2s;
+            }
+
+            /* ease : valeur par défaut. Permet de créer une transition 
+            relativement lente au début puis qui s’accélère au milieu et qui se termine lentement ; */
+            .d1{
+                transition-timing-function: ease;
+            }
+
+
+            /* linear : permet de créer une transition totalement linéaire 
+            c’est-à-dire qui va aller à la même vitesse du début à la fin ; */
+            .d2{
+                transition-timing-function: ease-in;
+            }
+
+            /* ease-in : permet de créer une transition avec un départ lent puis qui s’accélère ensuite ; */
+            .d3{
+                transition-timing-function: ease-out;
+            }
+
+            /* ease-out : permet de créer une transition qui va ralentir à la fin ; */
+            .d4{
+                transition-timing-function: ease-in-out;
+            }
+
+            /* ease-in-out : permet de créer une transition lente au début puis qui s’accélère
+             au milieu et qui se termine lentement. */
+            .d5{
+                transition-timing-function: linear;
+            }
+
+
+            /* cubic-bezier(x1,y1,x2,y2) : sert à créer une transition à la vitesse totalement personnalisé 
+            en renseignant une courbe de Bézier. */
+            .d6{
+                transition-timing-function: cubic-bezier(0.6, 0, 1, 1);
+            }
+
+            .d1:hover, .d2:hover, .d3:hover, .d4:hover, .d5:hover, .d6:hover{
+                width: 100%;
+            }
+    </style>
+</head>
+<body>
+    <div class="d1">transition-timing-function: ease</div>
+    <div class="d2">transition-timing-function: ease-in</div>
+    <div class="d3">transition-timing-function: ease-out</div>
+    <div class="d4">transition-timing-function: ease-in-out</div>
+    <div class="d5">transition-timing-function: linear</div>
+    <div class="d6">transition-timing-function: cubic-bezier(0.8, 0, 1, 1)</div>
+        
+</body>
+</html>

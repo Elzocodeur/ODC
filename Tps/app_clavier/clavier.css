@@ -1,0 +1,93 @@
+    *{
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container{
+        background-color: rgb(179, 177, 177);
+        width: 90vw;
+        height: 25vw;
+        position: absolute;
+        top: 20vh;
+        left: 5vw;
+        border: 5px solid white;
+        padding-top: 0.4%;
+        padding-left: 0.4%;
+        padding-right: 0.4%;
+        padding-bottom: 0.4%;
+        
+    }
+    .content{
+        display: flex;
+        gap: 5px;
+    
+
+    }
+    .content .cont1{
+        background-color: black;
+    color: white;
+    }
+
+    .content .B{
+        width: 86%;
+        height: 60px;
+        padding-top: 14px;
+    
+        border-radius: 12px;
+        box-shadow: 0px 2px 0px 5px white;
+    
+    }
+    .content .C{
+        width: 5%;
+        height: 60px;
+        text-align: center;
+        padding-top: 25px;
+    
+        border-radius: 12px;
+        box-shadow: 0px 3px 3px 5px white;
+    
+    }
+    .content .D{
+        width: 5%;
+        height: 60px;
+        text-align: center;
+        padding-top: 25px;
+    
+        border-radius: 12px;
+        box-shadow: 0px 3px 3px 5px white;
+    
+    }
+    .content .A{
+        width: 10%;
+        height: 70px;
+        text-align: center;
+        padding-top: 25px;
+    
+        border-radius: 12px;
+        box-shadow: 0px 3px 3px 4px white;
+        cursor: pointer;
+    
+    }
+
+
+    .Z{
+        width: 70px;height: 30px;background-color: rgb(20, 20, 20);margin-top: 2px; color: white;
+    
+    }
+
+
+
+    .cont1.A:active {
+        background-color: rgba(0, 0, 0, 0.8); /* Assombrir légèrement la touche lorsqu'elle est enfoncée */
+        box-shadow: 0px 1px 0px 0px; /* Supprimer l'ombre portée */
+        transform: translateY(2px); /* Déplacer légèrement la touche vers le bas */
+    }
+
+
+    .cont1.B:active {
+        background-color: rgba(0, 0, 0, 0.8); /* Assombrir légèrement la touche lorsqu'elle est enfoncée */
+        box-shadow: 0px 1px 0px 0px; /* Supprimer l'ombre portée */
+        transform: translateY(2px); /* Déplacer légèrement la touche vers le bas */
+    }
+    
