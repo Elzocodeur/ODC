@@ -1,0 +1,8 @@
+
+.wallet-app {
+  @apply  bg-indigo-600 max-w-2xl mx-auto;
+}
+
+.qr-placeholder {
+  @apply w-full rounded border-2 border-dashed border-gray-300;
+}

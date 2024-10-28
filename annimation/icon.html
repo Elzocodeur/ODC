@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>icons</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            motion: 0;
+            padding: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            display: flex;
+        }
+        ul li{
+            position: relative;
+            list-style: none;
+            width: 120px;
+            height: 120px;
+            background-color: #ccc;
+            margin: 0 20px;
+            border: 2px solid black;
+            box-sizing: border-box;
+            border-radius: 50%;
+            transition: .5s;
+        }
+        ul li .fa-solid{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 48px;
+            color: #262626;
+            transition: .5s;
+        }
+        ul li:hover .fa-solid{
+            color: white;
+        }
+        ul li::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            
+            background-color: #e91e63;
+            border-radius: 50%;
+            transform: scale(1);
+            transition: .5s;
+            opacity: 0;
+        }
+        ul li:hover:before{
+            opacity: 1;
+            transform: scale(.8 );
+        }
+
+        ul li::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            
+            background-color: transparent;
+            border-radius: 50%;
+            transform: scale(0);
+            transition: .5s;
+            opacity: 0;
+            border: 2px dashed #262626;
+            box-sizing: border-box;
+        }
+        ul li:hover:after{
+            opacity: 1;
+            animation: icons 10s linear infinite;
+        }
+        @keyframes icons {
+            0%{
+                transform: scale(0.92) rotate(0deg);
+            }
+            100%{
+                transform: scale(0.92) rotate(360deg);
+            }
+        }
+        
+    
+    </style>
+</head>
+<body>
+    <ul>
+        <li> <a href="#"><i class="fa-solid fa-gift"></i></a></li>
+        <li> <a href="#"><i class="fa-solid fa-martini-glass"></i></a></li>
+        <li><a href="#"><i class="fa-solid fa-heart"></i></a></li>
+        <li><a href="#"></a><i class="fa-solid fa-baseball"></i></li>
+        <li><a href="#"><i class="fa-solid fa-graduation-cap"></i></a></li>
+    </ul>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo3</title>
+    <style>
+            *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #24cf7c;
+    height: 100vh;
+    perspective: 1000px;
+}
+
+.box{
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    animation: rotation 2s 0s ease-out  infinite
+}
+
+@keyframes rotation{
+    0% {
+        rotate: x -180deg;
+    }
+    40%{
+        rotate: none;
+    }
+    100% {
+        rotate: y 180deg;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

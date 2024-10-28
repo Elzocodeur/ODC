@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exo2</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        height: 100vh;
+    }
+
+    .container {
+        width: 750px;
+        height: 300px;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .pacman {
+        position: relative;
+        background: transparent;
+        animation: leave 5s linear infinite;
+        &::before,
+        &::after {
+        position: absolute;
+        top: -80px;
+        display: block;
+        border-radius: 50%;
+        content: "";
+        height: 0px;
+        width: 0px;
+        }
+
+        &::before {
+        animation: chunk-top 0.5s ease infinite;
+        border: 90px solid #fcfdff;
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+        }
+
+        &::after {
+          animation: chunk-bottom 0.5s ease infinite;
+          border: 90px solid #fcfdff;
+          border-right-color: transparent;
+          border-top-color: transparent;
+        }
+      }
+
+      @keyframes chunk-top {
+        0%,
+        100% {
+          transform: rotate(-45deg);
+        }
+        50% {
+          transform: rotate(-80deg);
+        }
+      }
+
+      @keyframes chunk-bottom {
+        0%,
+        100% {
+          transform: rotate(-40deg);
+        }
+        50% {
+          transform: rotate(0deg);
+        }
+      }
+
+      @keyframes leave {
+        0% {
+          transform: translateX(0);
+        }
+        25% {
+          transform: translateX(650px);
+        }
+        51% {
+          transform: translate(500px) rotateY(180deg);
+        }
+
+        100% {
+          transform: translateX(0) rotateY(180deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="pacman"></div>
+    </div>
+  </body>
+</html>
