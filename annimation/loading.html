@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loading</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            
+        }
+        .container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            overflow: hidden;
+            border: 5px solid black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bolder;
+        }
+        .container span{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            font-size: 48px;
+            text-transform: uppercase;
+        }
+        .container span:nth-child(1){
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+            clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+            animation: loading1 4s linear infinite;
+        }
+        .container span:nth-child(2){
+            -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+            clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+            animation: loading1 4s reverse infinite;
+
+        }
+        @keyframes loading1 {
+            0%{
+                transform: translateX(100%);
+            }
+            40%{
+                transform: translateX(0);
+            }
+            60%{
+                transform: translateX(0);
+            }
+            100%{
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span  style="color: #f75858;">Loading</span>
+        <span  style="color: rgb(35, 35, 73);">Loading</span>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,52 @@
+<div class="bg-blue-500 text-white p-4 rounded-lg">
+  <h1 class="text-2xl font-bold">Wave transfert App</h1>
+  <p>Application de transfert d'argent wave angular node js</p>
+</div>
+
+<main class="wallet-app">
+  <header class="bg-indigo-600 p-4">
+    <div class="bg-white/10 rounded-xl p-6 text-center">
+      <div class="bg-white p-4 rounded-lg w-48 mx-auto">
+        <div class="qr-placeholder aspect-square bg-gray-100"></div>
+      </div>
+      <span class="text-white mt-2 block">Scanner</span>
+    </div>
+  </header>
+
+  <section class="bg-white rounded-t-3xl rounded-b-3xl -mt-4 p-6">
+    <div class="grid grid-cols-4 gap-4 mb-8 cursor-pointer">
+      <div *ngFor="let button of actionButtons()" class="flex flex-col items-center gap-2 cursor-pointer"
+           (click)="toggleView(button.label)">
+        <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center">
+          <i class="{{button.icon}} text-gray-600"></i>
+        </div>
+        <span class="text-xs text-gray-600">{{ button.label }}</span>
+      </div>
+    </div>
+
+    <div class="space-y-4">
+      <ng-container *ngIf="!currentView">
+        <div *ngFor="let transaction of transactions()" class="flex justify-between items-center py-2 border-b border-gray-100 last:border-0">
+          <div>
+            <p class="text-sm font-medium">{{ transaction.recipient }}</p>
+            <p class="text-xs text-gray-500">{{ transaction.date }}</p>
+          </div>
+          <span class="font-medium text-red-600">{{ transaction.amount }}F</span>
+        </div>
+      </ng-container>
+
+      <ng-container *ngIf="currentView === 'Transfert'">
+        <app-transfert></app-transfert>
+      </ng-container>
+      <ng-container *ngIf="currentView === 'Crédit'">
+        <app-credit></app-credit>
+      </ng-container>
+      <ng-container *ngIf="currentView === 'Paiements'">
+        <app-paiements></app-paiements>
+      </ng-container>
+      <ng-container *ngIf="currentView === 'Banque'">
+        <app-banque></app-banque>
+      </ng-container>
+    </div>
+  </section>
+</main>

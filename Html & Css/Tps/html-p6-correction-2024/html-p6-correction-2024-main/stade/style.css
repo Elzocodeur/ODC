@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.tribuneA{
+    width: 500px;
+    height: 170px;
+    border: 2px solid;
+    -webkit-transform: perspective(200px) rotateX(40deg);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.tribuneA .seats{
+    display: flex;
+    flex: 1;
+}
+
+.tribuneA .seats .seat{
+    background-color: darkgray;
+    flex: 1;
+    margin: 1px;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

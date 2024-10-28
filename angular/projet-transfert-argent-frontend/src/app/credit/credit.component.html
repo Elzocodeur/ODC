@@ -1,0 +1,33 @@
+<div class="p-4">
+  <h2 class="text-lg font-semibold text-center mb-4">Achat Crédit</h2>
+
+  <div class="flex items-center justify-around mb-4">
+    <button class="flex items-center space-x-2 text-blue-600">
+      <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+        <i class="fas fa-plus text-blue-600"></i>
+      </div>
+      <span>Saisir un nouveau numéro</span>
+    </button>
+
+    <button class="flex items-center space-x-2 text-blue-600">
+      <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+        <i class="fas fa-qrcode text-blue-600"></i>
+      </div>
+      <span>Scanner pour envoyer</span>
+    </button>
+  </div>
+
+  <h3 class="text-sm font-semibold mb-2">Favoris</h3>
+
+  <div class="space-y-3">
+    <div *ngFor="let contact of favorites" class="flex items-center space-x-4">
+      <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+        <i class="fas fa-user text-gray-500"></i>
+      </div>
+      <div class="flex flex-col">
+        <span class="font-medium">{{ contact.name }}</span>
+        <span class="text-gray-500 text-sm">{{ contact.number }}</span>
+      </div>
+    </div>
+  </div>
+</div>

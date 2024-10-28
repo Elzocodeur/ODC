@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cercles </title>
+    <style>
+        body{
+            background-color: rgb(21, 61, 75);
+        }
+        .container{
+            width: 220px;
+            height: 180px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border-radius: 5%;
+            align-items: center;
+            border-top: 15px solid #fff; 
+            transform: translate(-50%,-50%); 
+        }
+        .containe{
+            display: flex;
+            padding: 120px 0 0 10px;
+            position: absolute;
+            flex: 1;
+
+        }
+        .ball{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #fff;
+            position: relative;
+            transform-origin: 50% -300%;
+        }
+        .ball::before{
+            content: "";
+            width: 2px;
+            height: 120px;
+            background-color: #fffeff;
+            left: 18px;
+            top: -120px;
+            position: absolute;
+        }
+        .ball.first{
+            animation: ballOne .9s alternate ease-in infinite;
+        }
+        @keyframes ballOne {
+            0%{
+                transform: rotate(35deg);
+            }
+            50%{
+                transform: rotate(0deg);
+            }
+        }
+        .ball.last{
+            animation: ballTwo .9s alternate ease-out infinite;
+        }
+        @keyframes ballTwo {
+            50%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(-35deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="containe">
+            <div class="ball first"></div>
+            <div class="ball"></div>
+            <div class="ball"></div>
+            <div class="ball"></div>
+            <div class="ball last"></div>
+        </div>
+    </div>
+    
+</body>
+</html>

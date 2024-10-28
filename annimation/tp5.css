@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    height: 100vh;
+    background-color: #232e39;
+}
+.container{
+    position: relative;
+    width: 290px;
+    min-height: 50px;
+}
+span{
+    position: absolute;
+    font-size: 3em;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 4px;
+    left: 5px;
+    width: 100%;
+}
+.load{
+    color: orange;
+    border-right: 2px solid;
+    width: 20px;
+    /* top: -40px; */
+    overflow: hidden;
+    animation: deplacer 10s linear infinite;
+}
+@keyframes deplacer{
+    0%, 100%{
+        width:0%;
+    }
+    50%{
+        width: 98%;
+    }
+}

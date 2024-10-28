@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transfert fichier</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: rgb(18, 63, 75);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .comtainer{
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 800px;
+        height: 500px;
+        /* background-color: rgb(11, 43, 54); */
+        border-radius: 5%;
+        position: relative;
+
+    }
+    .dossier1{
+        background-image: url(images/dossier2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+
+    }
+    .dossier2{
+        background-image: url(images/dossier2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+    }
+    .fichier{
+        background-image: url(images/fichier.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100px;
+        height: 120px;
+        position: absolute;
+        top: 35px;
+        left: 10px;
+        animation: transfert 1.5s linear infinite;
+
+    }
+    @keyframes transfert {
+        10%{
+            transform: translate(23.2px, -45px) rotatez(0deg);
+        }
+        20%{
+            transform: translate(130.4px, -100px) rotatez(36deg);
+        }
+        30%{
+            transform: translate(200.6px, -100px) rotatez(72deg);
+        }
+        40%{
+            transform: translate(250.8px, -100px) rotatez(108deg);
+        }
+        50%{
+            transform: translate(300px, -90px) rotatez(144deg);
+        }
+        60%{
+            transform: translate(385.2px, -95px) rotatez(180deg);
+        }
+        70%{
+            transform: translate(435.4px, -100px) rotatez(216deg);
+        }
+        80%{
+            transform: translate(570.6px, -100px) rotatez(295deg);
+        }
+        90%{
+            transform: translate(600.8px, -100px) rotatez(300deg);
+        }
+    
+        100%{
+            transform: translate(600px, 0px) rotatez(360deg);
+        }
+
+    }
+</style>
+<body>
+    <div class="comtainer">
+        <div class="fichier"></div>
+        <div class="dossier1"></div>
+        <div class="dossier2"></div>
+    </div>
+    
+</body>
+</html>

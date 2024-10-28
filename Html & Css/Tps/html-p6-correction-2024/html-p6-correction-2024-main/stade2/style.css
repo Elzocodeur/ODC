@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.tribuneA{
+    width: 500px;
+    height: 170px;
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tribuneA .seats{
+    display: flex;
+    flex: 1;
+}
+
+.tribuneA .seats .seat{
+    background-color: darkgray;
+    flex: 1;
+    margin: 1px;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tribuneA .seats:nth-child(1){
+    width: 80%;
+}
+
+.tribuneA .seats:nth-child(2){
+    width: 82%;
+}
+
+.tribuneA .seats:nth-child(3){
+    width: 84%;
+}
+
+.tribuneA .seats:nth-child(4){
+    width: 86%;
+}
+
+.tribuneA .seats .seat{
+    -webkit-transform: perspective(200px) rotate(180deg);
+}
