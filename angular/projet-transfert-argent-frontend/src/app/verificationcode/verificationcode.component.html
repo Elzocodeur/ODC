@@ -1,0 +1,14 @@
+<div class="p-4 bg-gray-100 rounded-lg text-center shadow-lg max-w-sm mx-auto mt-10 rounded-phone">
+  <h2 class="text-lg font-bold mb-4">Enter Verification Code</h2>
+  <input type="password" class="text-center w-full p-2 mb-4 border rounded-lg text-2xl input-password" [(ngModel)]="enteredCode" readonly name="password" placeholder="Enter code" />
+
+  <div class="grid grid-cols-3 gap-4">
+    <button *ngFor="let digit of digits.slice(0, 9)" class="p-6 bg-blue-500 text-white rounded-full text-2xl focus:outline-none" (click)="addDigit(digit)">
+      {{ digit }}
+    </button>
+    <button class="p-6 bg-blue-500 text-white rounded-full text-2xl focus:outline-none" (click)="addDigit(digits[9])">
+      {{ digits[9] }}
+    </button>
+    <button class="p-6 bg-red-500 text-white rounded-full text-2xl focus:outline-none" (click)="deleteDigit()">⌫</button>
+  </div>
+</div>

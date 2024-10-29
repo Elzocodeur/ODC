@@ -1,12 +1,8 @@
-<div class="bg-blue-500 text-white p-4 rounded-lg">
-  <h1 class="text-2xl font-bold">Wave transfert App</h1>
-  <p>Application de transfert d'argent wave angular node js</p>
-</div>
+<!-- app.component.html -->
+<!-- <app-login *ngIf="!isLoggedIn && !showSecretComponent" (loginEvent)="showSecret()"></app-login>
+<app-secret *ngIf="showSecretComponent && !isWalletView" (codeEntered)="showWallet()"></app-secret>
 
-
-
-<main class="wallet-app">
-  <!-- Section Header avec QR -->
+<main *ngIf="isWalletView" class="wallet-app">
   <header class="bg-indigo-600 p-4">
     <div class="bg-white/10 rounded-xl p-6 text-center">
       <div class="bg-white p-4 rounded-lg w-48 mx-auto">
@@ -15,78 +11,18 @@
       <span class="text-white mt-2 block">Scanner</span>
     </div>
   </header>
-
-  <!-- Section Principale -->
-  <section class="bg-white rounded-t-3xl rounded-b-3xl  -mt-4 p-6">
-
-    <!-- Boutons d'action -->
-
-
-
-
-    <!-- <div class="grid grid-cols-4 gap-4 mb-8 cursor-pointer">
-      <div *ngFor="let button of actionButtons()" class="flex flex-col items-center gap-2 cursor-pointer" (click)="button?.label === 'Transfert' || 'Paiements' ? toggleTransfert() : null ">
-        <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center" *ngIf="button?.icon">
-          <i class="{{button.icon}} text-gray-600"></i>
-        </div>
-        <span class="text-xs text-gray-600" *ngIf="button?.label">{{ button.label }}</span>
-      </div>
-    </div> -->
-
+  <section class="bg-white rounded-t-3xl rounded-b-3xl -mt-4 p-6">
     <div class="grid grid-cols-4 gap-4 mb-8 cursor-pointer">
-      <div *ngFor="let button of actionButtons()" class="flex flex-col items-center gap-2 cursor-pointer"
-          (click)="toggleView(button.label)">
+      <div *ngFor="let button of actionButtons" class="flex flex-col items-center gap-2 cursor-pointer" (click)="toggleView(button.label)">
         <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center">
           <i class="{{button.icon}} text-gray-600"></i>
         </div>
         <span class="text-xs text-gray-600">{{ button.label }}</span>
       </div>
     </div>
-
-
-    <!-- Liste des transactions -->
-    <!-- <div class="space-y-4">
-      @for (transaction of transactions(); track transaction.recipient) {
-        <div class="flex justify-between items-center py-2 border-b border-gray-100 last:border-0">
-          <div>
-            <p class="text-sm font-medium">{{transaction.recipient}}</p>
-            <p class="text-xs text-gray-500">{{transaction.date}}</p>
-          </div>
-          <span class="font-medium text-red-600">{{transaction.amount}}F</span>
-        </div>
-      }
-    </div>
-    <div *ngIf="showTransfert">
-      <app-transfert></app-transfert>
-    </div> -->
-
-
-
-
-
-    <!-- Liste des transactions ou Transfert component -->
-<!-- <div class="space-y-4">
-  <ng-container *ngIf="!showTransfert; else  transfertTemplate">
-    <div *ngFor="let transaction of transactions()" class="flex justify-between items-center py-2 border-b border-gray-100 last:border-0">
-      <div>
-        <p class="text-sm font-medium">{{ transaction.recipient }}</p>
-        <p class="text-xs text-gray-500">{{ transaction.date }}</p>
-      </div>
-      <span class="font-medium text-red-600">{{ transaction.amount }}F</span>
-    </div>
-  </ng-container>
-
-  <ng-template #transfertTemplate>
-    <app-transfert></app-transfert>
-    <app-credit></app-credit>
-  </ng-template>
-</div> -->
-
-
-
-<div class="space-y-4">
+    <div class="space-y-4">
       <ng-container *ngIf="!currentView">
-        <div *ngFor="let transaction of transactions()" class="flex justify-between items-center py-2 border-b border-gray-100 last:border-0">
+        <div *ngFor="let transaction of transactions" class="flex justify-between items-center py-2 border-b border-gray-100 last:border-0">
           <div>
             <p class="text-sm font-medium">{{ transaction.recipient }}</p>
             <p class="text-xs text-gray-500">{{ transaction.date }}</p>
@@ -94,7 +30,6 @@
           <span class="font-medium text-red-600">{{ transaction.amount }}F</span>
         </div>
       </ng-container>
-
       <ng-container *ngIf="currentView === 'Transfert'">
         <app-transfert></app-transfert>
       </ng-container>
@@ -104,11 +39,61 @@
       <ng-container *ngIf="currentView === 'Paiements'">
         <app-payment></app-payment>
       </ng-container>
-      <!-- <ng-container *ngIf="currentView === 'Banque'">
-        <app-banque></app-banque>
-      </ng-container> -->
     </div>
+  </section>
+</main> -->
 
+
+
+<app-login *ngIf="!isLoggedIn && !showSecretComponent && !showVerificationComponent" (loginEvent)="showVerification()"></app-login>
+<app-verificationcode *ngIf="showVerificationComponent && !showSecretComponent" (codeEntered)="showSecret()"></app-verificationcode>
+<app-secret *ngIf="showSecretComponent && !isWalletView" (codeEntered)="showWallet()"></app-secret>
+
+<main *ngIf="isWalletView" class="wallet-app">
+  <header class="bg-indigo-600 p-4">
+    <div class="bg-white/10 rounded-xl p-6 text-center">
+      <div class="bg-white p-4 rounded-lg w-48 mx-auto">
+        <div class="qr-placeholder aspect-square bg-gray-100"></div>
+      </div>
+      <span class="text-white mt-2 block">Scanner</span>
+    </div>
+  </header>
+  <section class="bg-white rounded-t-3xl rounded-b-3xl -mt-4 p-6">
+    <div class="grid grid-cols-4 gap-4 mb-8 cursor-pointer">
+      <div *ngFor="let button of actionButtons" class="flex flex-col items-center gap-2 cursor-pointer" (click)="toggleView(button.label)">
+        <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center">
+          <i class="{{button.icon}} text-gray-600"></i>
+        </div>
+        <span class="text-xs text-gray-600">{{ button.label }}</span>
+      </div>
+    </div>
+    <div class="space-y-4">
+      <ng-container *ngIf="!currentView">
+        <div *ngFor="let transaction of transactions" class="flex justify-between items-center py-2 border-b border-gray-100 last:border-0">
+          <div>
+            <p class="text-sm font-medium">{{ transaction.recipient }}</p>
+            <p class="text-xs text-gray-500">{{ transaction.date }}</p>
+          </div>
+          <span class="font-medium text-red-600">{{ transaction.amount }}F</span>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="currentView === 'Transfert'">
+        <app-transfert></app-transfert>
+      </ng-container>
+      <ng-container *ngIf="currentView === 'Crédit'">
+        <app-credit></app-credit>
+      </ng-container>
+      <ng-container *ngIf="currentView === 'Paiements'">
+        <app-payment></app-payment>
+      </ng-container>
+    </div>
   </section>
 </main>
+
+
+<!-- </ng-container> -->
+
+<!-- <ng-template #loginTemplate>
+      <app-login></app-login>
+</ng-template> -->
 
